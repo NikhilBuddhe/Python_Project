@@ -20,5 +20,9 @@ steps:
   displayName: 'Run a multi-line script'
 
 - script: |
-    python -m pip install --upgrade pip
+    python -m venv env
+    source env/bin/activate
+    pip install -r requirements.txt
+    python helloworld.py
+  displayName: 'Run the python script'
 
